@@ -44,11 +44,11 @@ public class CharacterMechanics : MonoBehaviour
         else ch_animator.SetBool("Move", false);
 
         //поворот персонажа в сторону направления перемещения
-        if (Vector3.Angle(Vector3.forward, moveVector3) > 1f || Vector3.Angle(Vector3.forward, moveVector3) == 0)
-        {
-            Vector3 direct = Vector3.RotateTowards(transform.forward, moveVector3, speedMove, 0.0f);
-            transform.rotation = Quaternion.LookRotation(direct);
-        }
+        //if (Vector3.Angle(Vector3.forward, moveVector3) > 1f || Vector3.Angle(Vector3.forward, moveVector3) == 0)
+        //{
+        //    Vector3 direct = Vector3.RotateTowards(transform.forward, moveVector3, speedMove, 0.0f);
+        //    transform.rotation = Quaternion.LookRotation(direct);
+        //}
 
         moveVector3.y = gravityForse;
         ch_Controller.Move(moveVector3 * Time.deltaTime); //метод передвижения по напрвлению
