@@ -22,7 +22,7 @@ public class PlayerMove : MonoBehaviour
     
         if (_joystick.Horizontal != 0 || _joystick.Vertical != 0)
         {
-            transform.rotation = Quaternion.LookRotation(_rigidbody.velocity);
+            //transform.rotation = Quaternion.LookRotation(_rigidbody.velocity);
             _ch_animator.SetBool("Move", true);
         }
         else
